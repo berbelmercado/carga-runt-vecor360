@@ -32,4 +32,4 @@ Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUN
    ```bash
    python carga_runt.py
    ```
-2. Seguir las instrucciones en pantalla para cargar los datos desde el RUNT.
+2. Seguir las instrucciones en pantalla para cargar los datos desde el archivo.xlsx.
