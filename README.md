@@ -1,13 +1,7 @@
 # Carga RUNT ETL
 
 ## Descripción
-Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUNT). Esta herramienta permite la extracción, transformación y carga de datos desde diversas fuentes hacia un sistema de almacenamiento.
-
-## Características
-- **Interfaz fácil de usar**: Proporciona una interfaz gráfica para facilitar la carga de datos.
-- **Soporte para múltiples fuentes**: Capacidad para integrar datos de diferentes fuentes.
-- **Transformaciones personalizables**: Permite aplicar transformaciones necesarias a los datos antes de cargarlos.
-- **Integración con bases de datos**: Compatible con diversas bases de datos para almacenamiento.
+Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUNT). Esta herramienta permite carga de datos desde un archivo de excel hacia un sistema de almacenamiento.
 
 ## Requisitos
 - Python 3.x
@@ -22,20 +16,20 @@ Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUN
    ```
 2. Instalar las dependencias:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requerimientos.txt
    ```
+3. crear archivo .env al mismo nivel que el archivo carga_runt.py con la siguiente estructura:
+   ```bash
+   SERVIDOR_DB = Tu servidor.
+   USUARIO_BD = Usuario de base de datos.
+   CLAVE_BD = Clave de base de datos.
+   BD_VECORD = Tu base de datos.
 
+
+   ```
 ## Uso
 1. Ejecutar la aplicación:
    ```bash
-   python main.py
+   python carga_runt.py
    ```
 2. Seguir las instrucciones en pantalla para cargar los datos desde el RUNT.
-
-## Contribuciones
-Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request.
-
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT.  
-
-Si tienes preguntas, contacta al autor en: berbelmercado@gmail.com
