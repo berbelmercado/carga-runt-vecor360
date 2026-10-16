@@ -1,0 +1,6 @@
+.env
+.venv-build/
+build/
+dist/
+__pycache__/
+dataframe_filtrado.xlsx

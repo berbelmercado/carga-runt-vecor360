@@ -9,3 +9,12 @@ def resource_path(ruta_relativa):
     except Exception:
         base_path = os.path.abspath(".")
     return os.path.join(base_path,ruta_relativa)
+
+
+def ruta_ejecutable(ruta_relativa):
+    """resuelve rutas junto al ejecutable (o junto al script si no está empaquetado)"""
+    if getattr(sys, 'frozen', False):
+        base_path = os.path.dirname(sys.executable)
+    else:
+        base_path = os.path.dirname(os.path.abspath(sys.argv[0]))
+    return os.path.join(base_path, ruta_relativa)

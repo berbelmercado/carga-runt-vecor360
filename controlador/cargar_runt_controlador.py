@@ -25,6 +25,10 @@ class CargarRuntControllador():
         dataframe_procesado = None
         ruta_archivo = GuiGeneral.cargar_archivo()#Obtenemos la ruta del archivo a procesar
 
+        #Si el usuario cancela la selección, terminamos sin procesar
+        if not ruta_archivo:
+            return
+
         #Declaramos los objetos
         obj_archivo = ProcesarArchivo(ruta_archivo)
         obj_inserta_datos = InsertaDatos()
