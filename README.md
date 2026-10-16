@@ -5,7 +5,8 @@ Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUN
 
 ## Requisitos
 - Python 3.x
-- Bibliotecas necesarias: `pandas`, `sqlalchemy`, `requests`
+- Bibliotecas necesarias: `pandas`, `openpyxl`, `pyodbc`, `python-dotenv` (ver `requerimientos.txt`)
+- Microsoft ODBC Driver 17 for SQL Server.
 - Acceso a la base de datos donde se cargarán los datos.
 
 ## Instalación
