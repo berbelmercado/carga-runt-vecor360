@@ -89,7 +89,8 @@ class InsertaDatos:
 
             return size
         except Exception as e:
-            self.obj_log.error(f'error size {e}')
+            print(f'error size {e}')
+            raise
         
     def __delta_data(self):
         """
