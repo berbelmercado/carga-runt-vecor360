@@ -1,6 +1,5 @@
 import pandas as pd
 from os import path
-from utilidades.resolver_rutas import ruta_ejecutable
 
 class ProcesarArchivo:
     """
@@ -61,8 +60,6 @@ class ProcesarArchivo:
 
             #Filtramos los datos del archivo y lo guardamos en un nuevo Dataframe
             self.dataframe_filtrado = self.dataframe[['VIN','CANAL','Fecha','PLACA']]
-
-            self.dataframe_filtrado.to_excel(ruta_ejecutable('dataframe_filtrado.xlsx'), index=False)
 
             return True,self.dataframe_filtrado
         except Exception as e:
