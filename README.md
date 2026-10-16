@@ -43,6 +43,9 @@ build.bat
 Esto crea `dist\CargaRUNT.exe` (un solo archivo). El `.env` debe existir al compilar,
 porque se embebe dentro del ejecutable; si cambian las credenciales hay que volver a compilar.
 
+El ejecutable usa como ícono `logo_renault.ico`, ubicado en la raíz del proyecto (configurado
+en `carga_runt.spec`). Para cambiarlo, reemplazar ese archivo por otro `.ico` y volver a compilar.
+
 ### Distribuir a otras máquinas
 1. Compartir solo `CargaRUNT.exe` (no hace falta el `.env`).
 2. La máquina destino necesita **Microsoft ODBC Driver 17 for SQL Server** instalado
