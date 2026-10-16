@@ -40,14 +40,15 @@ Aplicación ETL para cargar datos del Registro Único Nacional de Tránsito (RUN
 ```bat
 build.bat
 ```
-Esto crea `dist\CargaRUNT.exe` (un solo archivo) y copia el `.env` a `dist\`.
+Esto crea `dist\CargaRUNT.exe` (un solo archivo). El `.env` debe existir al compilar,
+porque se embebe dentro del ejecutable; si cambian las credenciales hay que volver a compilar.
 
 ### Distribuir a otras máquinas
-1. Copiar `CargaRUNT.exe` y el archivo `.env` **en la misma carpeta**.
+1. Compartir solo `CargaRUNT.exe` (no hace falta el `.env`).
 2. La máquina destino necesita **Microsoft ODBC Driver 17 for SQL Server** instalado
    (es un controlador del sistema y no se puede incluir dentro del ejecutable):
    https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server
 3. Ejecutar `CargaRUNT.exe` con doble clic. No se requiere Python.
 
-> El archivo `.env` se lee desde la carpeta del ejecutable, por lo que las credenciales
-> pueden cambiarse sin recompilar y no quedan embebidas en el `.exe`.
+> Las credenciales embebidas no quedan a la vista, pero no están cifradas: alguien con
+> conocimientos técnicos puede extraerlas del `.exe`. Compártelo solo con personas de confianza.

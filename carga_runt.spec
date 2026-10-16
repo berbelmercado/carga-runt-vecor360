@@ -5,7 +5,7 @@ a = Analysis(
     ['carga_runt.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('.env', '.')],  # el .env queda embebido en el ejecutable
     hiddenimports=['openpyxl', 'pyodbc'],
     excludes=['matplotlib', 'scipy', 'IPython', 'pytest'],
     noarchive=False,
